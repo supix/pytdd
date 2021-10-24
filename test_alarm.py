@@ -14,6 +14,7 @@ class MyFirstTests(unittest.TestCase):
     def test_offAlarmDetectingMotionDoesNotRing(self):
         a = Alarm()
         a.deactivate()
+        a.motionDetected()
         self.assertFalse(a.isRinging())
 
     def test_onAlarmDetectingMotionDoesRing(self):
