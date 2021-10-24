@@ -37,27 +37,27 @@ class MyFirstTests(unittest.TestCase):
         a.reset()
         self.assertTrue(a.isActive())
 
-    def test_alarmIsOffAfter_A_D(self):
+    def test_alarmIsOffAfter_Activation_Deactivation(self):
         a = Alarm()
         a.activate()
         a.deactivate()
         self.assertFalse(a.isActive())
     
-    def test_alarmIsOffAfter_A_MD_D(self):
+    def test_alarmIsOffAfter_Activation_MotionDetection_Deactivation(self):
         a = Alarm()
         a.activate()
         a.motionDetected()
         a.deactivate()
         self.assertFalse(a.isActive())
 
-    def test_alarmDoesNotRingAfter_A_MD_D(self):
+    def test_alarmDoesNotRingAfter_Activation_MotionDetection_Deactivation(self):
         a = Alarm()
         a.activate()
         a.motionDetected()
         a.deactivate()
         self.assertFalse(a.isRinging())
 
-    def test_alarmDoesRingAfter_A_MD_R_MD(self):
+    def test_alarmDoesRingAfter_Activation_MotionDetection_Reset_MotionDetection(self):
         a = Alarm()
         a.activate()
         a.motionDetected()
