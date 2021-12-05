@@ -20,5 +20,5 @@ The alarm is implemented using the state pattern (see: https://refactoring.guru/
 The following command can be used to run the tests:
 
 ```
-python -m unittest -v test_alarm.py
+python -m unittest
 ```
